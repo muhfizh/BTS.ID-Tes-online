@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "2b763661-1214-47c2-9d18-7d14232eec75",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37958870",
+		"_collection_link": "https://sidomuncul.postman.co/workspace/sidomuncul-Workspace~384dc8cf-a066-4b09-84a8-1dcf9fdaa663/collection/37958870-2b763661-1214-47c2-9d18-7d14232eec75?action=share&source=collection_link&creator=37958870"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"satuduatiga\",\r\n    \"username\": \"muhfizh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"muhfizhufi@gmail.com\",\r\n    \"username\":\"muhfizh\",\r\n    \"password\":\"satuduatiga\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all checklist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIwOjQ1OjE0IEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjIsImlhdCI6MTczNTgyNTUxNH0._8rVLE0I0F5XkvU9YxS4TZx7HwXz-VE7-wCAdNN-xK0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/checklist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new checklist",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIwOjU0OjA4IEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjMsImlhdCI6MTczNTgyNjA0OH0.WHOAKvD6z2rkmnnkGywanLU46J06FT1kDXifQ8erQh4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Checklist Baru lagi aja\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/checklist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete checklist by checklist ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIwOjQ1OjE0IEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjIsImlhdCI6MTczNTgyNTUxNH0._8rVLE0I0F5XkvU9YxS4TZx7HwXz-VE7-wCAdNN-xK0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/checklist/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get checklist item by checklist id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIwOjU0OjA4IEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjMsImlhdCI6MTczNTgyNjA0OH0.WHOAKvD6z2rkmnnkGywanLU46J06FT1kDXifQ8erQh4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/checklist/3/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist",
+						"3",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new checklist item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIxOjEwOjMyIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjQsImlhdCI6MTczNTgyNzAzMn0.nQ06OzWcLotLm9nqA76aPpuFQfrsvFwLNZX1z2zUDEI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ItemName\" : \"Nama baru lagi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/checklist/4/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist",
+						"4",
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get checklist item by checklist item id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIxOjEwOjMyIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjQsImlhdCI6MTczNTgyNzAzMn0.nQ06OzWcLotLm9nqA76aPpuFQfrsvFwLNZX1z2zUDEI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/checklist/4/item/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist",
+						"4",
+						"item",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update status checklist iterm",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIxOjEwOjMyIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjQsImlhdCI6MTczNTgyNzAzMn0.nQ06OzWcLotLm9nqA76aPpuFQfrsvFwLNZX1z2zUDEI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/checklist/4/item/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist",
+						"4",
+						"item",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete checklist item id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIxOjEwOjMyIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjQsImlhdCI6MTczNTgyNzAzMn0.nQ06OzWcLotLm9nqA76aPpuFQfrsvFwLNZX1z2zUDEI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/checklist/4/item/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist",
+						"4",
+						"item",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rename checklist item name",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Token_Header",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0aW1lIjoiVGh1IEphbiAwMiAyMDI1IDIxOjEwOjMyIEdNVCswNzAwIChXZXN0ZXJuIEluZG9uZXNpYSBUaW1lKSIsInVzZXJuYW1lIjoibXVoZml6aCIsInBhc3N3b3JkIjoic2F0dWR1YXRpZ2EiLCJlbWFpbCI6Im11aGZpemh1ZmlAZ21haWwuY29tIiwiY2hlY2tsaXN0SWQiOjQsImlhdCI6MTczNTgyNzAzMn0.nQ06OzWcLotLm9nqA76aPpuFQfrsvFwLNZX1z2zUDEI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"itemName\": \"nama lain\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/checklist/4/item/rename/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checklist",
+						"4",
+						"item",
+						"rename",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
