@@ -2,12 +2,12 @@ const Dt_ToDo = require('../config/database');
 
 //Login
 exports.LoginUser = function(user, password, callback){
-    Dt_ToDo.query('select * from list_todo_tabs where username = ? and password = ? and rownum = 1', [user,password], callback);
+    Dt_ToDo.query('select * from list_todo_tabs where username = ? and password = ? limit 1', [user,password], callback);
 };
 
 //register
 exports.RegisterUser = function(newUser, callback){
-    Dt_ToDo.query('insert into list_todo_tabs set ?', [newUser], callback);
+    Dt_ToDo.query('insert into list_todo_tabs set ?', newUser, callback);
 };
 
 //GET All Checklist
@@ -17,12 +17,12 @@ exports.GetAllChecklist = function(callback){
 
 //Create New Checklist
 exports.CreateNewChecklist = function(newChecklist, callback){
-    Dt_ToDo.query('insert into list_todo_tabs set ?', [newChecklist], callback);
+    Dt_ToDo.query('insert into list_todo_tabs set ?', newChecklist, callback);
 };
 
 //Delete Checklist
 exports.DelChecklist = function(checklist_id, callback){
-    Dt_ToDo.query('delete from list_todo_tabs where checklistid = ?', [checklist_id], callback);
+    Dt_ToDo.query('delete from list_todo_tabs where checklistId = ?', [checklist_id], callback);
 };
 
 //Get Checklist item by Checklist Id
@@ -32,7 +32,7 @@ exports.GetChecklistItembyChecklistId = function(checklist_id, callback){
 
 //Create New Checklist Item 
 exports.CreateNewChecklistItem = function(newChecklistItem, checklist_id, callback){
-    Dt_ToDo.query('insert into list_todo_tabs set ? where checklistid = ?', [newChecklistItem, checklist_id], callback);
+    Dt_ToDo.query('insert into list_todo_tabs (select name, ?, checklistId, checklistItemId+1, username, password, email, status from list_todo_tabs where checklistId = ? order by checklistItemId DESC limit 1)', [checklist_id, newChecklistItem], callback);
 };
 
 //Get Checklist Item Checklist ID
@@ -52,5 +52,5 @@ exports.DelChecklistItem = function(checklist_id, checklistitem_id, callback){
 
 //Update name item checklist
 exports.RenameChecklistItem = function(checklistId, checklistitemid, nameitem, callback){
-    Dt_ToDo.query('update from list_todo_tabs where checklistid = ? and checklistitemid = ?', [nameitem, checklistId, checklistitemid], callback);
+    Dt_ToDo.query('update list_todo_tabs set itemname = ? where checklistid = ? and checklistitemid = ?', [nameitem, checklistId, checklistitemid], callback);
 };

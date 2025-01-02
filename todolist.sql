@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2025 at 12:00 PM
+-- Generation Time: Jan 02, 2025 at 03:28 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,6 +39,16 @@ CREATE TABLE `list_todo_tabs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `list_todo_tabs`
+--
+
+INSERT INTO `list_todo_tabs` (`name`, `itemname`, `checklistId`, `checklistItemId`, `username`, `password`, `email`, `status`) VALUES
+('Checklist Baru lagi aja', '', 4, 0, 'muhfizh', 'satuduatiga', 'muhfizhufi@gmail.com', 0),
+('Checklist Baru lagi aja', 'nama lain', 4, 1, 'muhfizh', 'satuduatiga', 'muhfizhufi@gmail.com', 0),
+('Checklist Baru lagi aja', 'Nama baru lagi', 4, 2, 'muhfizh', 'satuduatiga', 'muhfizhufi@gmail.com', 1),
+('Checklist Baru lagi aja', 'Nama baru lagi', 4, 3, 'muhfizh', 'satuduatiga', 'muhfizhufi@gmail.com', 0);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -46,19 +56,7 @@ CREATE TABLE `list_todo_tabs` (
 -- Indexes for table `list_todo_tabs`
 --
 ALTER TABLE `list_todo_tabs`
-  ADD PRIMARY KEY (`checklistId`,`checklistItemId`),
-  ADD UNIQUE KEY `checklistItemId` (`checklistItemId`),
-  ADD UNIQUE KEY `checklistId` (`checklistId`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `list_todo_tabs`
---
-ALTER TABLE `list_todo_tabs`
-  MODIFY `checklistId` int(100) NOT NULL AUTO_INCREMENT;
+  ADD PRIMARY KEY (`checklistId`,`checklistItemId`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
